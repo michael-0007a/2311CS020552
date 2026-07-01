@@ -127,7 +127,7 @@ export function NotificationsPage() {
     <Box sx={{ maxWidth: 800, mx: "auto", px: 2, py: 4 }}>
       {/* Header Area */}
       <Paper elevation={2} sx={{ p: 3, mb: 4, borderRadius: 2, background: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)", color: "white" }}>
-        <Stack direction="row" alignItems="center" spacing={2}>
+        <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>
           <Badge badgeContent={totalUnreadCount} color="error" max={99}>
             <NotificationsIcon sx={{ fontSize: 40 }} />
           </Badge>
@@ -158,7 +158,7 @@ export function NotificationsPage() {
       >
         <Tab
           label={
-            <Stack direction="row" alignItems="center" spacing={1}>
+            <Stack direction="row" spacing={1} sx={{ alignItems: "center" }}>
               <NotificationsIcon size="small" />
               <span>All Notifications</span>
               {totalUnreadCount > 0 && (
@@ -170,7 +170,7 @@ export function NotificationsPage() {
         />
         <Tab
           label={
-            <Stack direction="row" alignItems="center" spacing={1}>
+            <Stack direction="row" spacing={1} sx={{ alignItems: "center" }}>
               <StarIcon size="small" />
               <span>Priority Inbox</span>
             </Stack>
@@ -185,14 +185,16 @@ export function NotificationsPage() {
           {/* Controls row */}
           <Stack
             direction={{ xs: "column", sm: "row" }}
-            justifyContent="space-between"
-            alignItems={{ xs: "stretch", sm: "center" }}
             spacing={2}
-            mb={3}
+            sx={{
+              justifyContent: "space-between",
+              alignItems: { xs: "stretch", sm: "center" },
+              mb: 3,
+            }}
           >
             <NotificationFilter value={filter} onChange={handleFilterChange} />
 
-            <Stack direction="row" spacing={2} alignItems="center" justifyContent="space-between">
+            <Stack direction="row" spacing={2} sx={{ alignItems: "center", justifyContent: "space-between" }}>
               <FormControl size="small" sx={{ minWidth: 100 }}>
                 <InputLabel id="limit-select-label">Page Size</InputLabel>
                 <Select
@@ -275,10 +277,12 @@ export function NotificationsPage() {
           {/* Priority inbox controls */}
           <Stack
             direction="row"
-            justifyContent="space-between"
-            alignItems="center"
             spacing={2}
-            mb={3}
+            sx={{
+              justifyContent: "space-between",
+              alignItems: "center",
+              mb: 3,
+            }}
           >
             <FormControl size="small" sx={{ minWidth: 140 }}>
               <InputLabel id="topn-select-label">Show Top N</InputLabel>
