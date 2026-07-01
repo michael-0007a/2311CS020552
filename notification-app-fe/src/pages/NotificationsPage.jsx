@@ -128,11 +128,14 @@ export function NotificationsPage() {
       {/* Header Area */}
       <Box sx={{
         mb: 4,
-        background: "linear-gradient(90deg, rgba(25,118,210,0.9) 0%, rgba(156,39,176,0.9) 100%)",
-        color: "white",
+        background: "rgba(255, 255, 255, 0.4)",
+        backdropFilter: "blur(12px)",
+        WebkitBackdropFilter: "blur(12px)",
+        color: "text.primary",
         p: 3,
-        borderRadius: "16px 16px 0 0",
-        boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+        border: "1px solid rgba(255, 255, 255, 0.5)",
+        borderRadius: "16px",
+        boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.05)",
       }}>
         <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>
           <Badge badgeContent={totalUnreadCount} color="error" max={99}>

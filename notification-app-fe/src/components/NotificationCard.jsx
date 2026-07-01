@@ -21,20 +21,21 @@ export function NotificationCard({ notification, isRead, onToggleRead }) {
 
   return (
     <Card
+      elevation={0}
       sx={{
         position: "relative",
-        borderLeft: isRead ? "4px solid rgba(0,0,0,0.1)" : "4px solid #667eea",
-        backgroundColor: isRead ? "rgba(255, 255, 255, 0.4)" : "rgba(255, 255, 255, 0.85)",
+        borderLeft: isRead ? "1px solid rgba(255,255,255,0.5)" : "4px solid rgba(142, 197, 252, 0.8)",
+        backgroundColor: "rgba(255, 255, 255, 0.4)",
         backdropFilter: "blur(12px)",
         WebkitBackdropFilter: "blur(12px)",
-        border: "1px solid rgba(255, 255, 255, 0.6)",
+        border: "1px solid rgba(255, 255, 255, 0.5)",
         borderRadius: "12px",
         boxShadow: "0 4px 16px 0 rgba(31, 38, 135, 0.05)",
-        transition: "all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)",
+        transition: "all 0.2s ease",
         "&:hover": {
-          transform: "translateY(-4px) scale(1.01)",
-          boxShadow: "0 12px 24px 0 rgba(31, 38, 135, 0.15)",
-          backgroundColor: "rgba(255, 255, 255, 0.95)",
+          transform: "translateY(-2px)",
+          backgroundColor: "rgba(255, 255, 255, 0.6)",
+          boxShadow: "0 8px 24px 0 rgba(31, 38, 135, 0.08)",
         },
         mb: 2,
       }}
