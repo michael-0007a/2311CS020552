@@ -8,7 +8,7 @@ export async function fetchNotifications(limit, page, notificationType) {
 
     const token = await getAccessToken();
 
-    const url = new URL(NOTIFICATIONS_URL);
+    const url = new URL(NOTIFICATIONS_URL, window.location.origin);
     if (limit !== undefined && limit !== null) {
       url.searchParams.append("limit", limit);
     }

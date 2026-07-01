@@ -45,7 +45,12 @@ export async function Log(stack, level, packageName, message) {
       }),
     });
 
-    return response.ok;
+    if (!response.ok) {
+      console.error("Log API Error:", await response.text());
+      return false;
+    }
+
+    return true;
   } catch (error) {
     console.error("Logging failed:", error.message);
     return false;

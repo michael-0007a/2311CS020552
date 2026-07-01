@@ -126,21 +126,28 @@ export function NotificationsPage() {
   return (
     <Box sx={{ maxWidth: 800, mx: "auto", px: 2, py: 4 }}>
       {/* Header Area */}
-      <Paper elevation={2} sx={{ p: 3, mb: 4, borderRadius: 2, background: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)", color: "white" }}>
+      <Box sx={{
+        mb: 4,
+        background: "linear-gradient(90deg, rgba(25,118,210,0.9) 0%, rgba(156,39,176,0.9) 100%)",
+        color: "white",
+        p: 3,
+        borderRadius: "16px 16px 0 0",
+        boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+      }}>
         <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>
           <Badge badgeContent={totalUnreadCount} color="error" max={99}>
             <NotificationsIcon sx={{ fontSize: 40 }} />
           </Badge>
           <Box>
             <Typography variant="h4" fontWeight={800}>
-              Campus Notifications
+              Campus Updates
             </Typography>
-            <Typography variant="subtitle2" sx={{ opacity: 0.8 }}>
-              Stay updated with academic results, placements, and campus events.
+            <Typography variant="subtitle2" sx={{ opacity: 0.9 }}>
+              Your latest academic and event notifications.
             </Typography>
           </Box>
         </Stack>
-      </Paper>
+      </Box>
 
       {/* Tabs Navigation */}
       <Tabs
@@ -313,19 +320,6 @@ export function NotificationsPage() {
             )}
           </Stack>
 
-          {/* Ranking Rule Explanation Card */}
-          <Card variant="outlined" sx={{ mb: 3, backgroundColor: "#f0f7ff", borderColor: "#c0e0ff" }}>
-            <CardContent sx={{ py: 1.5, "&:last-child": { pb: 1.5 } }}>
-              <Typography variant="subtitle2" color="primary" fontWeight="bold" gutterBottom>
-                Ranking Priority Rules:
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                1. <strong>Category Weight</strong>: Placement &gt; Result &gt; Event.
-                <br />
-                2. <strong>Recency Weight</strong>: If categories match, newer notifications appear first.
-              </Typography>
-            </CardContent>
-          </Card>
 
           {/* Empty state */}
           {priorityNotifications.length === 0 && (

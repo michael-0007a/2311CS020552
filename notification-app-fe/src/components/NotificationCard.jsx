@@ -23,13 +23,20 @@ export function NotificationCard({ notification, isRead, onToggleRead }) {
     <Card
       sx={{
         position: "relative",
-        transition: "all 0.2s ease-in-out",
+        borderLeft: isRead ? "4px solid rgba(0,0,0,0.1)" : "4px solid #667eea",
+        backgroundColor: isRead ? "rgba(255, 255, 255, 0.4)" : "rgba(255, 255, 255, 0.85)",
+        backdropFilter: "blur(12px)",
+        WebkitBackdropFilter: "blur(12px)",
+        border: "1px solid rgba(255, 255, 255, 0.6)",
+        borderRadius: "12px",
+        boxShadow: "0 4px 16px 0 rgba(31, 38, 135, 0.05)",
+        transition: "all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)",
         "&:hover": {
-          transform: "translateY(-2px)",
-          boxShadow: 3,
+          transform: "translateY(-4px) scale(1.01)",
+          boxShadow: "0 12px 24px 0 rgba(31, 38, 135, 0.15)",
+          backgroundColor: "rgba(255, 255, 255, 0.95)",
         },
-        borderLeft: isRead ? "4px solid #bdbdbd" : "4px solid #1976d2",
-        backgroundColor: isRead ? "#f9f9f9" : "#ffffff",
+        mb: 2,
       }}
     >
       <Box sx={{ p: 2, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
