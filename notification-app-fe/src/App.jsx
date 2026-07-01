@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Log } from "./api/logger";
+import { NotificationsPage } from "./pages/NotificationsPage";
 
 function App() {
   useEffect(() => {
@@ -8,21 +9,11 @@ function App() {
       import.meta.env.VITE_ACCESS_TOKEN
     );
 
-    async function test() {
-      const ok = await Log(
-        "frontend",
-        "info",
-        "api",
-        "Testing logger"
-      );
-
-      console.log(ok);
-    }
-
-    test();
+    // Log application startup
+    Log("frontend", "info", "config", "Application start");
   }, []);
 
-  return <div>Hello</div>;
+  return <NotificationsPage />;
 }
 
 export default App;

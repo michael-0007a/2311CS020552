@@ -1,6 +1,6 @@
 import { Card, Box, Typography, Stack, Chip, IconButton } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
 
 export function NotificationCard({ notification, isRead, onToggleRead }) {
   const { ID, Type, Message, Timestamp } = notification;
@@ -62,7 +62,7 @@ export function NotificationCard({ notification, isRead, onToggleRead }) {
           size="medium"
           title={isRead ? "Mark as unread" : "Mark as read"}
         >
-          {isRead ? <CheckCircleIcon /> : <CheckCircleOutlineIcon />}
+          {isRead ? <CheckCircleIcon /> : <CheckCircleOutlinedIcon />}
         </IconButton>
       </Box>
     </Card>
