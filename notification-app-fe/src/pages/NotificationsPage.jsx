@@ -227,7 +227,7 @@ export function NotificationsPage() {
 
           {/* Loading, Error and Empty states */}
           {loading && (
-            <Box display="flex" justifyContent="center" py={6}>
+            <Box sx={{ display: "flex", justifyContent: "center", py: 6 }}>
               <CircularProgress />
             </Box>
           )}
@@ -260,7 +260,7 @@ export function NotificationsPage() {
 
           {/* Pagination Controls */}
           {!loading && !error && notifications.length > 0 && (
-            <Box display="flex" justifyContent="center" mt={4}>
+            <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
               <Pagination
                 count={displayTotalPages}
                 page={page}

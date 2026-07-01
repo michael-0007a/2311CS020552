@@ -34,7 +34,7 @@ export function NotificationCard({ notification, isRead, onToggleRead }) {
     >
       <Box sx={{ p: 2, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <Stack spacing={1} sx={{ flex: 1, pr: 2 }}>
-          <Stack direction="row" alignItems="center" spacing={1}>
+          <Stack direction="row" spacing={1} sx={{ alignItems: "center" }}>
             <Chip
               label={Type}
               color={getTypeColor(Type)}
