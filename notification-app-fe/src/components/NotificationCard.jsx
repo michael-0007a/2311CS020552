@@ -24,19 +24,8 @@ export function NotificationCard({ notification, isRead, onToggleRead }) {
       elevation={0}
       sx={{
         position: "relative",
-        borderLeft: isRead ? "1px solid rgba(255,255,255,0.5)" : "4px solid rgba(142, 197, 252, 0.8)",
-        backgroundColor: "rgba(255, 255, 255, 0.4)",
-        backdropFilter: "blur(12px)",
-        WebkitBackdropFilter: "blur(12px)",
-        border: "1px solid rgba(255, 255, 255, 0.5)",
-        borderRadius: "12px",
-        boxShadow: "0 4px 16px 0 rgba(31, 38, 135, 0.05)",
-        transition: "all 0.2s ease",
-        "&:hover": {
-          transform: "translateY(-2px)",
-          backgroundColor: "rgba(255, 255, 255, 0.6)",
-          boxShadow: "0 8px 24px 0 rgba(31, 38, 135, 0.08)",
-        },
+        borderLeft: isRead ? 1 : 4,
+        borderColor: isRead ? "divider" : "primary.main",
         mb: 2,
       }}
     >

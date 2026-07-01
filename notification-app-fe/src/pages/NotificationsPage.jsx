@@ -126,17 +126,7 @@ export function NotificationsPage() {
   return (
     <Box sx={{ maxWidth: 800, mx: "auto", px: 2, py: 4 }}>
       {/* Header Area */}
-      <Box sx={{
-        mb: 4,
-        background: "rgba(255, 255, 255, 0.4)",
-        backdropFilter: "blur(12px)",
-        WebkitBackdropFilter: "blur(12px)",
-        color: "text.primary",
-        p: 3,
-        border: "1px solid rgba(255, 255, 255, 0.5)",
-        borderRadius: "16px",
-        boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.05)",
-      }}>
+      <Paper elevation={0} sx={{ mb: 4, p: 3 }}>
         <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>
           <Badge badgeContent={totalUnreadCount} color="error" max={99}>
             <NotificationsIcon sx={{ fontSize: 40 }} />
@@ -150,7 +140,7 @@ export function NotificationsPage() {
             </Typography>
           </Box>
         </Stack>
-      </Box>
+      </Paper>
 
       {/* Tabs Navigation */}
       <Tabs
